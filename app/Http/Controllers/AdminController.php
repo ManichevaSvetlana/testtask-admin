@@ -27,24 +27,6 @@ class AdminController extends Controller
         ]);
     }
 
-    public function getUser(Request $request)
-    {
-        $isUser = true;
-        return view('admin.pages-profile',[
-            'currentPage' => 'User Profile',
-            'isUser' => $isUser
-        ]);
-    }
-
-    public function getGroup(Request $request)
-    {
-        $isUser = false;
-        return view('admin.pages-profile',[
-            'currentPage' => 'User Profile',
-            'isUser' => $isUser
-        ]);
-    }
-
     public function getGroups()
     {
         $isGroup = true;
