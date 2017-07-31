@@ -26,6 +26,8 @@ Route::post('/groups-list', function(\Illuminate\Http\Request $request){
     $pattern = ''.$request->value.'%';
     try {
         return \App\Group::where('name', 'like', $pattern)->get();
+
+
     }
     catch(ErrorException $e){
         return '';
